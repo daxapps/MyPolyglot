@@ -13,6 +13,10 @@
 		E02ACC141E718690001A6C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E02ACC131E718690001A6C4B /* Assets.xcassets */; };
 		E02ACC171E718690001A6C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02ACC151E718690001A6C4B /* LaunchScreen.storyboard */; };
 		E02ACC221E718690001A6C4B /* MyPolyglotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02ACC211E718690001A6C4B /* MyPolyglotTests.swift */; };
+		E02ACC331E719706001A6C4B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E02ACC321E719706001A6C4B /* NotificationCenter.framework */; };
+		E02ACC361E719706001A6C4B /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02ACC351E719706001A6C4B /* TodayViewController.swift */; };
+		E02ACC391E719706001A6C4B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02ACC371E719706001A6C4B /* MainInterface.storyboard */; };
+		E02ACC3D1E719707001A6C4B /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E02ACC301E719706001A6C4B /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +27,28 @@
 			remoteGlobalIDString = E02ACC081E718690001A6C4B;
 			remoteInfo = MyPolyglot;
 		};
+		E02ACC3B1E719707001A6C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E02ACC011E718690001A6C4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E02ACC2F1E719706001A6C4B;
+			remoteInfo = Widget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E02ACC411E719707001A6C4B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E02ACC3D1E719707001A6C4B /* Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E02ACC091E718690001A6C4B /* MyPolyglot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPolyglot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +61,11 @@
 		E02ACC1D1E718690001A6C4B /* MyPolyglotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPolyglotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02ACC211E718690001A6C4B /* MyPolyglotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPolyglotTests.swift; sourceTree = "<group>"; };
 		E02ACC231E718690001A6C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E02ACC301E719706001A6C4B /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02ACC321E719706001A6C4B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E02ACC351E719706001A6C4B /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		E02ACC381E719706001A6C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E02ACC3A1E719707001A6C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +83,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E02ACC2D1E719706001A6C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02ACC331E719706001A6C4B /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +99,8 @@
 			children = (
 				E02ACC0B1E718690001A6C4B /* MyPolyglot */,
 				E02ACC201E718690001A6C4B /* MyPolyglotTests */,
+				E02ACC341E719706001A6C4B /* Widget */,
+				E02ACC311E719706001A6C4B /* Frameworks */,
 				E02ACC0A1E718690001A6C4B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +110,7 @@
 			children = (
 				E02ACC091E718690001A6C4B /* MyPolyglot.app */,
 				E02ACC1D1E718690001A6C4B /* MyPolyglotTests.xctest */,
+				E02ACC301E719706001A6C4B /* Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +137,24 @@
 			path = MyPolyglotTests;
 			sourceTree = "<group>";
 		};
+		E02ACC311E719706001A6C4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E02ACC321E719706001A6C4B /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E02ACC341E719706001A6C4B /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				E02ACC351E719706001A6C4B /* TodayViewController.swift */,
+				E02ACC371E719706001A6C4B /* MainInterface.storyboard */,
+				E02ACC3A1E719707001A6C4B /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,10 +165,12 @@
 				E02ACC051E718690001A6C4B /* Sources */,
 				E02ACC061E718690001A6C4B /* Frameworks */,
 				E02ACC071E718690001A6C4B /* Resources */,
+				E02ACC411E719707001A6C4B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E02ACC3C1E719707001A6C4B /* PBXTargetDependency */,
 			);
 			name = MyPolyglot;
 			productName = MyPolyglot;
@@ -134,6 +195,23 @@
 			productReference = E02ACC1D1E718690001A6C4B /* MyPolyglotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E02ACC2F1E719706001A6C4B /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E02ACC3E1E719707001A6C4B /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				E02ACC2C1E719706001A6C4B /* Sources */,
+				E02ACC2D1E719706001A6C4B /* Frameworks */,
+				E02ACC2E1E719706001A6C4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = E02ACC301E719706001A6C4B /* Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +233,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = E02ACC081E718690001A6C4B;
 					};
+					E02ACC2F1E719706001A6C4B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EN498SV6Q8;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = E02ACC041E718690001A6C4B /* Build configuration list for PBXProject "MyPolyglot" */;
@@ -172,6 +255,7 @@
 			targets = (
 				E02ACC081E718690001A6C4B /* MyPolyglot */,
 				E02ACC1C1E718690001A6C4B /* MyPolyglotTests */,
+				E02ACC2F1E719706001A6C4B /* Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +275,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02ACC2E1E719706001A6C4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02ACC391E719706001A6C4B /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +306,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E02ACC2C1E719706001A6C4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E02ACC361E719706001A6C4B /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -221,6 +321,11 @@
 			isa = PBXTargetDependency;
 			target = E02ACC081E718690001A6C4B /* MyPolyglot */;
 			targetProxy = E02ACC1E1E718690001A6C4B /* PBXContainerItemProxy */;
+		};
+		E02ACC3C1E719707001A6C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E02ACC2F1E719706001A6C4B /* Widget */;
+			targetProxy = E02ACC3B1E719707001A6C4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -239,6 +344,14 @@
 				E02ACC161E718690001A6C4B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E02ACC371E719706001A6C4B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E02ACC381E719706001A6C4B /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -338,6 +451,7 @@
 		E02ACC271E718690001A6C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EN498SV6Q8;
 				INFOPLIST_FILE = MyPolyglot/Info.plist;
@@ -351,6 +465,7 @@
 		E02ACC281E718690001A6C4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EN498SV6Q8;
 				INFOPLIST_FILE = MyPolyglot/Info.plist;
@@ -391,6 +506,32 @@
 			};
 			name = Release;
 		};
+		E02ACC3F1E719707001A6C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = EN498SV6Q8;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daxapps.MyPolyglot.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E02ACC401E719707001A6C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = EN498SV6Q8;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daxapps.MyPolyglot.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -416,6 +557,14 @@
 			buildConfigurations = (
 				E02ACC2A1E718690001A6C4B /* Debug */,
 				E02ACC2B1E718690001A6C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E02ACC3E1E719707001A6C4B /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E02ACC3F1E719707001A6C4B /* Debug */,
+				E02ACC401E719707001A6C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
