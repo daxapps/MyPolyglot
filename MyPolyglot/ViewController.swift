@@ -16,6 +16,10 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(startTest))
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "End Test", style: .plain, target: nil, action: nil)
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewWord))
         
         let titleAttributes = [NSFontAttributeName: UIFont(name: "AmericanTypewriter", size: 22)!]
@@ -147,6 +151,14 @@ class ViewController: UITableViewController {
         saveWords()
     }
     
+    func startTest() {
+        
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "Test") as? TestViewController else { return }
+        
+        vc.words = words
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
