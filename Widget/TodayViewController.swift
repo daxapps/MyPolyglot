@@ -15,9 +15,11 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDataS
     
     var words = [String]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add "Show More/Show Less" button in widget
+        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         
         if let defaults = UserDefaults(suiteName: "group.com.DaxApps.MyPolyglot") {
             if let savedWords = defaults.object(forKey: "Words") as? [String] {
@@ -66,6 +68,16 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDataS
             } else {
                 cell.detailTextLabel?.text = ""
             }
+        }
+    }
+    
+    // Allows Widget to expand with info when "Show More" button is pressed
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        
+        if activeDisplayMode == .compact {
+            preferredContentSize = CGSize(width: 0, height: 110)
+        } else {
+            preferredContentSize = CGSize(width: 0, height: 440)
         }
     }
     
